@@ -19,7 +19,7 @@ def AES_plot():
     plt.ylabel('Throughput (kB/s)')
     plt.legend()
     plt.grid(True)
-    plt.savefig("C:/Users/shivp/Desktop/CSC321/Asgn-2/resources/plots/aes_throughput.png")
+    plt.savefig("../resources/plots/aes_throughput.png")
 
 def RSA_plot():
     key_sizes = ['1024 bits', '2048 bits', '4096 bits']
@@ -38,7 +38,7 @@ def RSA_plot():
     ax.set_xticklabels(key_sizes)
     ax.legend()
     plt.grid(True)
-    plt.savefig("C:/Users/shivp/Desktop/CSC321/Asgn-2/resources/plots/rsa_throughput.png")
+    plt.savefig("../resources/plots/rsa_throughput.png")
 
 if __name__ == "__main__":
     AES_plot()

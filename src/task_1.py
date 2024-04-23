@@ -61,7 +61,7 @@ def encrypt_bmp(imgPath, Encryption, key, IV):
 
 
 def save_encrypted_bmp(header, ecb_encrypted, cbc_encrypted, Encryption):
-    encrypted_img_path = f"C:/Users/shivp/Desktop/CSC321/Asgn-2/resources/encryptedData/{Encryption.lower()}.bmp"
+    encrypted_img_path = f"../resources/encryptedData/{Encryption.lower()}.bmp"
     with open(encrypted_img_path, "wb") as file:
         file.write(header + ecb_encrypted)
         file.write(header + cbc_encrypted)
@@ -75,7 +75,7 @@ if __name__ == '__main__':
     IV = generateIV()
 
     # Image path
-    imgPath = "C:/Users/shivp/Desktop/CSC321/Asgn-2/resources/cp-logo.bmp"
+    imgPath = "../resources/cp-logo.bmp"
 
     # ECB mode
     header, ecb_encrypted = encrypt_bmp(imgPath, "ECB", secret_key, IV)
